@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Characters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/sub.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background-image: repeating-linear-gradient(90deg, #7b2829, #892c2d 4%);
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 0%;
+      }
+    </style>
+  </head>
+  <body onload="draw();">
+    <!-- header starts here -->
+    <header id="main-header">
+       <nav>
+        <ul>
+          <li>
+            <a href="../index.html"><span class="current">Home</span></a>
+          </li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="spoilers.html">Spoilers</a></li>
+        </ul>
+        <a href="#" id="openup">OtakuLovers</a>
+      </nav>
+    </header>
+    <!-- header ends here -->
+    <h1 id="canvas-heading">
+      Art gallery using Canvas 
+    </h1>
+    <!-- main section containing images -->
+    <section id="photo">
+      <div class="photo-row">
+        <div>
+          <img src="../images/characters/ichigo.jpg" />
+          <h4>Ichigo</h4>
+          <div class="overlay">Bleach</div>
+        </div>
+
+        <div>
+          <img src="../images/characters/luffy.jpeg" />
+          <h4>Luffy</h4>
+          <div class="overlay">OnePiece</div>
+        </div>
+
+        <div>
+          <img src="../images/characters/asta.jpg" />
+          <h4>Asta</h4>
+          <div class="overlay">BlackClover</div>
+        </div>
+        <div>
+          <img src="../images/characters/franky.png" />
+          <h4>Franky</h4>
+          <div class="overlay">OnePiece</div>
+        </div>
+      </div>
+
+      <div class="photo-row">
+        <div>
+          <img src="../images/characters/gowthor.jpg" />
+          <h4>Gowthor</h4>
+          <div class="overlay">Seven Deadly Sins</div>
+        </div>
+        <div>
+          <img src="../images/characters/kaneki.jpg" />
+          <h4>Kaneki</h4>
+          <div class="overlay">Tokyo Ghoul</div>
+        </div>
+        <div>
+          <img src="../images/characters/kuroko.jpg" />
+          <h4>Kuroko</h4>
+          <div class="overlay">Kuroko no Basket</div>
+        </div>
+        <div>
+          <img src="../images/characters/nami.jpg" />
+          <h4>Nami</h4>
+          <div class="overlay">OnePiece</div>
+        </div>
+      </div>
+
+      <div class="photo-row">
+        <div>
+          <img src="../images/characters/nico.jpg" />
+          <h4>Nico Robin</h4>
+          <div class="overlay">One Piece</div>
+        </div>
+        <div>
+          <img src="../images/characters/touka.jpg" />
+          <h4>Kaneki</h4>
+          <div class="overlay">Tokyo Ghoul</div>
+        </div>
+        <div>
+          <img src="../images/characters/killua.jpg" />
+          <h4>Killua</h4>
+          <div class="overlay">Hunter X Hunter</div>
+        </div>
+        <div>
+          <img src="../images/characters/midoria.jpg" />
+          <h4>Midoria</h4>
+          <div class="overlay">Boku no Hero</div>
+        </div>
+      </div>
+    </section>
+    <!-- main section ends here -->
+    <div class="show">
+      <div class="over"></div>
+      <div class="img-show">
+        <span>X</span>
+        <img src="" />
+      </div>
+    </div>
+    <div class="clr"></div>
+    <img id="frame" src="../images/frame.png" />
+    <!-- use of text overflow -->
+    <p id="overflow-ellipse">The art gallery contains only some of the anime characters available</p>
+
+    <button id="top">Up</button>
+    <!-- footer starts here -->
+    <footer id="main-footer">
+      <p>Copyright &copy; All rights reserved</p>
+    </footer>
+    <!-- footer ends here -->
+    <script>
+      function draw() {
+        // Loop through all images
+        for (var i = 0; i < document.images.length; i++) {
+          // Don't add a canvas for the frame image
+          if (document.images[i].getAttribute("id") != "frame") {
+            // Create canvas element
+            canvas = document.createElement("canvas");
+
+            canvas.setAttribute("width", 200);
+            canvas.setAttribute("height", 200);
+
+            // Insert before the image
+            document.images[i].parentNode.insertBefore(
+              canvas,
+              document.images[i]
+            );
+            if (canvas.getContext) {
+              ctx = canvas.getContext("2d");
+
+              // Draw image to canvas
+              ctx.drawImage(document.images[i], 10, 15, 150, 150);
+
+              // Add frame
+              ctx.drawImage(document.getElementById("frame"), 0, 0, 200, 200);
+            } else {
+              alert("Canvas Not Supported.");
+            }
+          }
+        }
+      }
+    </script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

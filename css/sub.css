@@ -1,0 +1,306 @@
+.box {
+  width: 70%;
+  float: left;
+  margin: 20px 20px;
+
+  /* box-sizing: border-box; */
+}
+
+.box {
+  background-color: #25254748;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.box > h1,
+aside h1 {
+  color: rgb(29, 0, 56);
+  text-shadow: 2px 2px 1px black;
+  font-size: 30px;
+}
+
+.box section {
+  padding: 10px 0px 0px 0px;
+  background-color: #25254748;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-sizing: border-box;
+  margin: 25px 35px;
+}
+
+.box section img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 0px 20px;
+  padding: 120px auto;
+  float: left;
+}
+.box section p {
+  text-align: justify;
+  margin: 10px;
+}
+
+/* aside bar of news page */
+aside {
+  position: fixed;
+  right: 5rem;
+  top: 11rem;
+}
+
+aside article {
+  display: block;
+}
+aside article img {
+  /* background:red; */
+  width: 20px;
+  height: 20px;
+}
+aside article a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #24025c;
+}
+aside article a:hover {
+  color: red;
+}
+
+#form {
+  margin-left: 40px;
+  margin-right: 20px;
+  float: left;
+}
+#form input,
+textarea {
+  display: block;
+  margin: 8px;
+}
+#form input[type="submit"] {
+  padding: 9px;
+  font-size: 18px;
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#form input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+/* styling the map */
+#map {
+  /* float:right; */
+  height: 400px;
+  margin-right: 20px;
+  /* margin-left:120px; */
+}
+
+/* styling of character page
+ */
+
+/* make background black transparent  */
+.show {
+  display: none;
+  z-index: 999;
+}
+.show .over {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+/* fix the position of the image to the center of screen */
+.show .img-show {
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+/* cross button at the right corner of the image */
+.img-show span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  cursor: pointer;
+}
+.img-show img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  max-width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: -77px;
+  /* margin-bottom: 3px; */
+  text-align: center;
+}
+
+.photo-row div:hover .overlay {
+  opacity: 1;
+}
+
+.photo-row {
+  float: left;
+  width: 28%;
+  padding: 1rem;
+}
+.photo-row div {
+  width: 200px;
+}
+.photo-row h4 {
+  text-align: center;
+  width: 200px;
+}
+#photo {
+  margin-left: 10%;
+}
+
+#center {
+  float: left;
+  width: 60%;
+  text-align: center;
+  margin-left:1rem;
+}
+#center > h1 {
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: left;
+  margin: 1rem;
+  border: 5px dotted green;
+  width: 200px;
+  padding: 5px;
+}
+#center div h1 {
+  padding: 5px;
+}
+
+#center h1:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+.content {
+  display: none;
+  text-align: justify;
+  margin: auto 2rem;
+}
+.content img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-right: 20px;
+}
+.xmlsearch {
+  width: 25%;
+  /* box-sizing:border-box; */
+  position: absolute;
+  /* float:right; */
+  top: 20%;
+  right: 8%;
+}
+
+.title {
+  background-color: #919191;
+  margin: 0.5rem auto;
+  border-radius: 1rem;
+}
+#search {
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: #383886a4;
+  border-radius: 1rem;
+  /* width: 312px%; */
+  color: rgb(168, 23, 23);
+  transition: width 0.4s ease-in-out;
+}
+
+#anime-load {
+  background: #3399ff;
+}
+#anime-load li {
+  background: #cce5ff;
+ 
+  margin: 5px auto;
+}
+#anime-load li:hover {
+  opacity: 0.6;
+}
+
+/* styling the heading of canvas page */
+#canvas-heading {
+  text-align: center;
+  color: cadetblue;
+  margin: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/* text overflow formating */
+#overflow-ellipse {
+  border: 1px solid cadetblue;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
+  margin-left: 7rem;
+}
+@media screen and (max-width: 680px) {
+  .box {
+    width: 100%;
+    float: none;
+    margin: 0px;
+  }
+  aside {
+    position: inherit;
+    margin: 2rem;
+  }
+  .xmlsearch{
+    position: inherit;
+    margin:5rem;
+    width:auto;
+  }
+}

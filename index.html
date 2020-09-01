@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>OtakuLovers</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      .social {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 5px;
+        border-radius: 50%;
+        transition: 1s;
+      }
+      .social:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      .fa-facebook {
+        background: #3b5998;
+        color: white;
+      }
+
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+      /* code for darkmode */
+      .dark-mode {
+        background-color: #2a2c31;
+      }
+
+      .dark-mode #text p {
+        /* font-size: 1.5rem; */
+        /* text-align:justify; */
+        text-shadow: 1px 1px 3px red;
+        -webkit-text-shadow: 1px 1px 3px red;
+        -moz-text-shadow: 1px 1px 3px red;
+      }
+      .dark-mode #main-image #text h1 {
+        text-shadow: 1px 1px 4px red;
+        -webkit-text-shadow: 1px 1px 4px red;
+        -moz-text-shadow: 1px 1px 2px red;
+      }
+      .dark-mode #main-image #text h2 {
+        /* font-size: 2rem; */
+        text-shadow: 1px 1px 2px green;
+        -webkit-text-shadow: 1px 1px 2px green;
+        -moz-text-shadow: 1px 1px 2px green;
+      }
+      .dark-mode .container {
+        background-color: #35383e;
+      }
+      .dark-mode .container header h2 {
+        color: #f0eaea;
+      }
+      .dark-mode .container h3 span {
+        background-color: #515459;
+      }
+      .dark-mode .container h3,
+      .dark-mode .container article h3,
+      .dark-mode .container article h3 p {
+        color: #dddddd;
+      }
+      .dark-mode .container input[type="submit"] {
+        background-color: #515459;
+      }
+      .dark-mode .container input[type="submit"]:hover {
+        /* opacity: 0.7; */
+        background-color: #008cba;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header starts here -->
+    <header id="main-header">
+      <div id="search-bar">
+        <form id="frmSearch">
+          <input
+            type="search"
+            placeholder="Search"
+            style="display: none"
+            list="anime"
+          />
+          <span><i class="fa fa-search"></i></span>
+        </form>
+      </div>
+      <!-- navigation bar  -->
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><span class="current">Home</span></a>
+          </li>
+          <li><a href="html/news.html">News</a></li>
+          <li><a href="html/reviews.html">Reviews</a></li>
+          <li><a href="html/characters.html">Characters</a></li>
+          <li><a href="html/spoilers.html">Spoilers</a></li>
+          <li>
+            <button
+              type="button"
+              name="dark_light"
+              id="switch"
+              title="Toggle dark/light mode"
+            >
+              🌛
+            </button>
+          </li>
+        </ul>
+        <a href="#" id="openup">OtakuLovers</a>
+      </nav>
+      <!-- navigation bar ends here -->
+    </header>
+    <!-- header ends here -->
+
+    <!-- body main image -->
+    <section id="main-image">
+      <figure>
+        <img src="images/main1.jpg" alt="ancient architecture" />
+        <img src="images/main2.jpg" alt="ancient architecture" />
+        <img src="images/main3.jpg" alt="ancient architecture" />
+        <img src="images/main4.jpg" alt="ancient architecture" />
+        <img src="images/main5.jpg" alt="ancient architecture" />
+      </figure>
+      <!-- text over image -->
+      <section id="text">
+        <h1>OtakuLovers</h1>
+        <h2>Watch the best anime here</h2>
+        <p>
+          OtakuLovers is one of the leading anime site that provides free
+          trending anime without any ads. It has fast servers across the globe
+          which makes streaming of videos really easy and convient. Enjoy any
+          genre of anime with us.
+        </p>
+      </section>
+    </section>
+    <!-- main section containing anime list, newly added anime and about me -->
+    <section id="main-section">
+      <section class="container">
+        <header><h2>Anime List</h2></header>
+        <article>
+          <h3>
+            <span>1</span>
+            <p>One piece</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>2</span>
+            <p>Black Clover</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>3</span>
+            <p>Boku no hero Academie</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>4</span>
+            <p>Naruto</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>5</span>
+            <p>Boruto</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>6</span>
+            <p>Your Name</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>7</span>
+            <p>Tokyo Ghoul</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>8</span>
+            <p>Fairy Tail</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>9</span>
+            <p>Bleach</p>
+          </h3>
+        </article>
+        <article>
+          <h3>
+            <span>10</span>
+            <p>Seven Deadly Sins</p>
+          </h3>
+        </article>
+      </section>
+
+      <section class="container">
+        <header><h2>Newly added anime</h2></header>
+        <article>
+          <figure>
+            <img src="images/airforce.jpg" alt="girly air force" />
+          </figure>
+          <h3>Girly Air Force</h3>
+          <p>Genre: Action,Sc-Fi</p>
+        </article>
+
+        <article>
+          <figure><img src="images/hero_marks.jpg" alt="hero maks" /></figure>
+          <h3>Hero Maks</h3>
+          <p>Genre:Magic,Romance</p>
+        </article>
+        <article>
+          <figure>
+            <img src="images/kuroko.jpg" alt="kuroko no basket" />
+          </figure>
+          <h3>Kuroko no Basket</h3>
+          <p>Genre: Fantsy, Comedy, Sports</p>
+        </article>
+        <article>
+          <figure><img src="images/pokemon.jpg" alt="Pokemon" /></figure>
+          <h3>Pokemon</h3>
+          <p>Genre: Adventure, Action, Sports</p>
+        </article>
+        <article>
+          <figure>
+            <img
+              src="images/grims.jpg"
+              alt="Grimms Notes The Animation
+              "
+            />
+          </figure>
+          <h3>Grimms Notes The Animation</h3>
+          <p>Genre: Fantsy, Magic, Action, Adventure</p>
+        </article>
+        <article>
+          <figure>
+            <img src="images/mahou.jpg" alt="Mahou Shoujo Tokushusen Asuka " />
+          </figure>
+          <h3>Mahou Shoujo Tokushusen</h3>
+          <p>Genre: Drama, Magic, Senin</p>
+        </article>
+      </section>
+
+      <section class="container" style="background-color: inherit">
+        <header><h2>About Me</h2></header>
+
+        <h3>Email: samratshrestha4536@gmail.com</h3>
+        <h3>Phone: +9776382198231</h3>
+        <h3>Address: Kathmandu,Nepal</h3>
+        <input type="email" id="email" />
+        <input type="submit" value="Suscribe" id="suscribe" />
+        <h3>
+          <a
+            href="https://www.facebook.com/samrat.shrestha.1884"
+            class="fa fa-facebook social"
+          ></a>
+          <a
+            href="https://plus.google.com/u/0/117007666280532095412?tab=wX"
+            class="fa fa-google social"
+          ></a>
+          <a href="https://www.linkedin.com/" class="fa fa-linkedin social"></a>
+          <a
+            href="https://www.youtube.com/channel/UCA3I7v_mRhjVNT_lbw3f_8A?view_as=subscriber"
+            class="fa fa-youtube social"
+          ></a>
+        </h3>
+      </section>
+    </section>
+    <button id="top">Up</button>
+    <div class="clr"></div>
+
+    <!-- footer starts here -->
+    <footer id="main-footer">
+      <p>Copyright &copy; All rights reserved</p>
+    </footer>
+    <!-- footer ends here -->
+
+    <!-- datalist for searching -->
+    <datalist id="anime">
+      Your browser doesn't support datalist
+      <option value="OnePiece">Onepiece</option>
+      <option value="BlackColver">BlackClover</option>
+      <option value="Fairy Tail">Fairy Tail</option>
+      <option value="Bleach">Bleach</option>
+      <option value="Boku no Hero Academie">Boku no Hero Academie</option>
+      <option value="Ninja Turtle">Ninja Turtle</option>
+      <option value="Your Name">Your Name</option>
+      <option value="Seven Deadly Sins">Seven Deadly Sins</option>
+      <option value="Naruto">Naruto</option>
+      <option value="Boruto">Boruto</option>
+      <option value="Pokemon">Pokemon</option>
+    </datalist>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/imageslider.js"></script>
+  </body>
+</html>
